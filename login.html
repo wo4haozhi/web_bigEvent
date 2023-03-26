@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登陆页面</title>
+    <link rel="stylesheet" href="./assets/css/login.css">
+    <link rel="stylesheet" href="./assets/lib/layui/css/layui.css">
+</head>
+<body>
+    <div >
+        <div class="layui-main" style="margin-top: 50px;">
+            <img src="./assets/images/logo.png" alt="" />
+        </div>
+
+        <!-- //登录框盒子 -->
+        <div class="logAndRegBox">
+            <div class="title"></div>
+
+
+            <!-- 登录盒子 -->
+            <div class="log-box" >
+               <!--  表单盒子 -->
+               <form class="layui-form" action="">
+                <div class="layui-form-item">
+                    <i class="layui-icon layui-icon-username"></i>   
+                    <input type="text" name="username" required  lay-verify="required" placeholder="请输入用户名" autocomplete="off" class="layui-input" style="padding-left: 32px;">
+                </div>
+
+                <div class="layui-form-item">
+                    <i class="layui-icon layui-icon-password"></i>   
+                    <input type="password" name="password" required  lay-verify="required" placeholder="请输入密码" autocomplete="off" class="layui-input" style="padding-left: 32px;">
+                </div>
+
+                <div class="layui-form-item">
+                    <button class="layui-btn layui-btn-fluid layui-btn-normal" lay-submit >立即提交</button>
+                </div>
+
+                <div class="layui-form-item link">
+                    <a id="link_reg" href="javascript:;">去注册账号</a>
+                </div>
+                
+               </form>
+            </div>
+            <!-- 注册盒子 -->
+            <div class="reg-box" >
+                <a id="link_log" href="javascript:;">去登录</a>
+            </div>
+        </div>
+        <!-- //登录框盒子 -->
+
+    </div>
+
+
+
+    <!-- 加入js文件 -->
+    <script src="./assets/lib/jquery.js"></script>
+    <script src="./assets/js/login.js"></script>
+    
+</body>
+</html>
