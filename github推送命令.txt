@@ -1,0 +1,83 @@
+Administrator@Pc-202102282237 MINGW64 ~/Desktop/code-自学 (index)
+$ git branch
+* index
+  master
+  –set-upstream-to=origin/dev
+
+Administrator@Pc-202102282237 MINGW64 ~/Desktop/code-自学 (index)
+$ git add .
+
+Administrator@Pc-202102282237 MINGW64 ~/Desktop/code-自学 (index)
+$ git commit -m"添加了个人中心开发"
+[index 0629968] 添加了个人中心开发
+ 11 files changed, 454 insertions(+), 4 deletions(-)
+ create mode 100644 assets/css/user/user_avatar.css
+ create mode 100644 assets/css/user/user_info.css
+ create mode 100644 assets/css/user/user_pwd.css
+ create mode 100644 assets/js/user/user_avatar.js
+ create mode 100644 assets/js/user/user_info.js
+ create mode 100644 assets/js/user/user_pwd.js
+ create mode 100644 user/user_avatar.html
+ create mode 100644 user/user_info.html
+ create mode 100644 user/user_pwd.html
+
+Administrator@Pc-202102282237 MINGW64 ~/Desktop/code-自学 (index)
+$ git push -u origin index   将本地分支推送到远程仓库
+Enumerating objects: 24, done.
+Counting objects: 100% (24/24), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (18/18), done.
+Writing objects: 100% (18/18), 5.47 KiB | 933.00 KiB/s, done.
+Total 18 (delta 4), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (4/4), completed with 2 local objects.
+To github.com:wo4haozhi/web_bigEvent.git
+   1753268..0629968  index -> index
+branch 'index' set up to track 'origin/index'.
+
+Administrator@Pc-202102282237 MINGW64 ~/Desktop/code-自学 (index)
+$ git checkout master  切换主分支
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+Administrator@Pc-202102282237 MINGW64 ~/Desktop/code-自学 (master)
+$ git merge index   将分支合并到主分支
+Updating 1753268..0629968
+Fast-forward
+ assets/css/user/user_avatar.css | 77 +++++++++++++++++++++++++++++++++++++++++
+ assets/css/user/user_info.css   | 12 +++++++
+ assets/css/user/user_pwd.css    | 12 +++++++
+ assets/js/baseAPI.js            |  2 +-
+ assets/js/user/user_avatar.js   | 59 +++++++++++++++++++++++++++++++
+ assets/js/user/user_info.js     | 59 +++++++++++++++++++++++++++++++
+ assets/js/user/user_pwd.js      | 41 ++++++++++++++++++++++
+ index.html                      |  6 ++--
+ user/user_avatar.html           | 54 +++++++++++++++++++++++++++++
+ user/user_info.html             | 69 ++++++++++++++++++++++++++++++++++++
+ user/user_pwd.html              | 67 +++++++++++++++++++++++++++++++++++
+ 11 files changed, 454 insertions(+), 4 deletions(-)
+ create mode 100644 assets/css/user/user_avatar.css
+ create mode 100644 assets/css/user/user_info.css
+ create mode 100644 assets/css/user/user_pwd.css
+ create mode 100644 assets/js/user/user_avatar.js
+ create mode 100644 assets/js/user/user_info.js
+ create mode 100644 assets/js/user/user_pwd.js
+ create mode 100644 user/user_avatar.html
+ create mode 100644 user/user_info.html
+ create mode 100644 user/user_pwd.html
+
+Administrator@Pc-202102282237 MINGW64 ~/Desktop/code-自学 (master)
+$ git push
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:wo4haozhi/web_bigEvent.git
+   1753268..0629968  master -> master
+
+Administrator@Pc-202102282237 MINGW64 ~/Desktop/code-自学 (master)
+$ git checkout -b article 创建新分支
+Switched to a new branch 'article'
+
+Administrator@Pc-202102282237 MINGW64 ~/Desktop/code-自学 (article)
+$ git branch
+* article
+  index
+  master
+  –set-upstream-to=origin/dev
